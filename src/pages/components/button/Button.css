@@ -1,0 +1,22 @@
+.button{
+    /* width: 128px;
+    height: 36px; */
+    min-width: 174px;
+    width: 36%;
+    min-height: 36px;
+    background: #90DDF0;
+    border: 2px solid #2E4950;
+    border-radius: 10px;
+    outline: 0px;
+    font-family: 'TTCommons';
+    font-weight: 700;
+    font-size: 16px;
+    color: #31434e;
+    text-align: center;
+    letter-spacing: 0.05em;
+    transition: .2s;
+    padding-top: 4px;
+}
+.button:hover{
+    background: #E6E0E9;
+}

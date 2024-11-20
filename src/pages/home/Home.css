@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.home {
+    min-width: 320px;
+    max-width: 768px;
+    background: #161616;
+    font-family: "Roboto", sans-serif;
+    color: #E6E0E9;
+    position: relative;
+    /* overflow: scroll; */
+    /**/
+    margin: 0px auto;
+}
+
+
+.home::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+.top-nav {
+    width: 100%;
+    height: 64px;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid rgba(230, 224, 233, 0.15);
+}
+
+.top-nav .go-back {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav .go-back h2 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.top-nav .controls {
+    width: 72px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .app-nav {
+    min-width: 320px;
+    max-width: 768px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: -1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    padding-bottom: 10px;
+}
+
+.app-nav .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(58, 83, 99, 0.3);
+    backdrop-filter: blur(36px);
+}
+
+.app-nav svg {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+.app-nav svg path {
+    transition: .2s;
+}
+
+.app-nav svg:hover path {
+    fill: #e6e0e9;
+} */
+
+main {
+    width: 100%;
+    height: 640px;
+    padding: 20px 16px;
+}
+
+main .balance {
+    width: 100%;
+    height: 186px;
+    border: 1px solid #2c3b44;
+    border-radius: 15px;
+    padding: 12px;
+    backdrop-filter: blur(4px);
+    background: linear-gradient(180deg, rgba(96, 150, 186, 0) 0%, rgba(96, 150, 186, 0.5) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+main .balance h2 {
+    font-weight: 500;
+    font-size: 12px;
+    color: #517886;
+}
+
+main .balance .my-money {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+main .balance .interest {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #39bd46;
+}
+
+main .balance .control-balance {
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .balance .control-balance button {
+    width: 30%;
+    /* width: 95px; */
+    height: 100%;
+    background: #00000000;
+    outline: 1px solid #e6e0e9;
+    border: 0px;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 0%;
+    color: #e6e0e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+main .balance .control-balance button svg {
+    min-width: 25px;
+    max-width: 25px;
+}
+
+main .balance .control-balance button svg path {
+    min-width: 25px;
+}
+
+main .balance .control-balance button:hover svg path {
+    transition: .4s;
+}
+
+main .balance .control-balance button:hover {
+    background: #e6e0e9;
+    outline: 1px solid #e6e0e900;
+    color: #161616;
+}
+
+main .balance .control-balance button:hover svg path {
+    fill: #161616;
+}
+
+
+main .balance .control-balance button p {
+    margin-left: 4px;
+}
+.filler{
+    height: 90px;
+}
+.empty{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+main .transactions {
+    width: 100%;
+    background: rgba(230, 224, 233, 0.04);
+    border: 1px solid #517886;
+    border-radius: 15px;
+    padding: 18px 0px;
+    /*padding-bottom: 100px;*/
+}
+
+main .transactions .info {
+    width: 100%;
+    height: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 12px;
+}
+
+main .transactions .sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .transactions .sort p {
+    margin-right: 6px;
+}
+
+main .transactions ul li:last-child {
+    border-bottom: none;
+}
+main .transactions ul li {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    transition: .2s;
+    border-bottom: 1px solid #517886;
+    padding: 0px 12px;
+}
+
+main .transactions ul li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+main .transactions ul li .info-transfer {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+main .transactions ul li .info-transfer .text-info {
+    margin-left: 12px;
+}
+
+main .transactions ul li .info-transfer .text-info h2 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+main .transactions ul li .info-transfer .text-info p {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(230, 224, 233, 0.65);
+
+}
+
+main .transactions ul li .info-transfer .text-info p span {
+    color: #39bd46;
+}
+
+main .transactions ul li .data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+main .transactions ul li .data .count-money {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.plus {
+    color: #39bd46;
+}
+
+.minus {
+    color: #FF3C38;
+}
+
+.pending{
+    color: #ffb938 !important;
+}
+
+main .transactions ul li .data .time {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(230, 224, 233, 0.65);
+}
+
+
+@media screen and (max-width: 390px) {
+    main .balance .control-balance button {
+        font-size: 9px;
+        font-weight: 600;
+        margin-left: 0px;
+    }
+
+    main .transactions p {
+        font-size: 12px;
+    }
+
+    main .balance .control-balance button svg {
+        min-width: 20px;
+        max-width: 20px;
+    }
+}

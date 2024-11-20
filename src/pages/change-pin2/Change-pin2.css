@@ -1,0 +1,35 @@
+.change-pin2 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(96, 150, 186, 0) 0%, rgba(96, 150, 186, 0.5) 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "."
+        "data"
+        ".";
+}
+
+.change-pin2 .app-nav .background {
+    background: #21282D;
+    backdrop-filter: blur(0px);
+}
+
+.change-pin2 .change-pin-data {
+    width: 100%;
+    height: 247px;
+    grid-area: data;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 28px;
+}
+.change-pin2 .change-pin-data .inputs{
+    width: 100%;
+    height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

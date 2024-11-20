@@ -1,0 +1,29 @@
+.toggle-buttons{
+    width: 100%;
+    /* min-height: 85px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+.toggle-buttons button{
+    min-width: 128px;
+    width: 50%;
+    height: 36px;
+    border: 1.00px solid #517886;
+    border-radius: 10px;
+    text-align: center;
+    background: #00000000;
+    outline: 0px;
+    font-family: 'TTCommons';
+    font-weight: 500;
+    font-size: 12px;
+    color: #e6e0e9;
+    transition: .2s ease-in-out; 
+    backdrop-filter: blur(23.97233009338379px);
+}
+.toggle-buttons .btn-active{
+    border: 3px solid #90ddf0;
+    color: #90ddf0;
+}

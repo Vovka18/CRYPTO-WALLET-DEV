@@ -1,0 +1,24 @@
+.msg-error {
+    min-width: 320px;
+    max-width: 768px;
+    width: 100%;
+    min-height: 39px;
+    background: linear-gradient(90deg, #ff7878 0%, #faa 20%, #ffc4c4 80%, #ff7878 100%);
+    align-items: center;
+    margin-bottom: 37px;
+    display: flex;
+    justify-content: center;
+    font-family: "TTCommons";
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #ff3c38;
+    position: absolute;
+    top: 0px;
+    transform: translateY(-100px);
+    transition: .2s;
+}
+
+.msg-error-activ{
+    transform: translateY(60px);
+}

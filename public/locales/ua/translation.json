@@ -1,0 +1,82 @@
+{
+  "start-screen": {
+    "welcome1": "Вітаємо!",
+    "welcome2": "Оберіть мову застосунку",
+    "btn-ua": "Українська",
+    "btn-ru": "Російська",
+    "btn": "ДАЛІ"
+  },
+  "sign-up": {
+    "reg-new-user": "Реєстрація нового користувача",
+    "input-name": "ПІБ",
+    "input-date": "Дата народження",
+    "input-mail": "E-Mail",
+    "input-phone": "Номер телефону",
+    "input-pin": "Створіть PIN-код",
+    "input-pin-repeat": "Підтвердіть PIN-код",
+    "reg-button": "ЗБЕРЕГТИ"
+  },
+  "home": {
+    "empty-transactions": "Транзакций пока нет.",
+    "my-balance": "Мій рахунок",
+    "btn-deposit": "Депозит",
+    "btn-send": "Надіслати",
+    "btn-transfer": "Транзакції",
+    "last-transfer": "Останні транзакції",
+    "sorted": "Сортувати "
+  },
+  "settings": {
+    "push-msg": "МЕНЮ НАЛАШТУВАНЬ",
+    "language-app": "Мова застосунку",
+    "ukr": "Українська",
+    "ru": "Російська",
+    "current-balance": "Валюта балансу",
+    "uah": "UAH",
+    "usd": "USD",
+    "change-pin": "Змінити PIN-код",
+    "support-service": "Служба підтримки"
+  },
+  "change-pin": {
+    "push-msg": "ЗМІНА PIN-КОДУ",
+    "error-msg": "Невірний E-mail",
+    "placeholder": "Ваш E-mail",
+    "btn": "НАДІСЛАТИ КОД"
+  },
+  "change-pin2": {
+    "push-msg": "ЗМІНА PIN-КОДУ",
+    "error-msg": "Невірний код",
+    "placeholder-code": "Код з листа",
+    "placeholder-pin": "Новий PIN-код",
+    "placeholder-pin-repeat": "Підтвердити PIN-код",
+    "btn": "ЗБЕРЕГТИ"
+  },
+  "payment-complete": {
+    "push-msg": "ВИКОНАНО!",
+    "text": " успішно зараховано на Ваш баланс!",
+    "btn": "ПОВЕРНУТИСЬ"
+  },
+  "transfer": {
+    "push-message": "ПЕРЕКАЗ",
+    "error-message": "Невірний ІD користувача",
+    "inputId-placeholder": "Вкажіть ID отримувача",
+    "inputMoney-placeholder": "Вкажіть суму переказу (UAH)",
+    "btn": "ПІДТВЕРДИТИ"
+  },
+  "transfer-complete": {
+    "push-msg": "ВИКОНАНО!",
+    "text": "успішно зараховано пользователю",
+    "btn": "ПОВЕРНУТИСЬ"
+  },
+  "payment":{
+    "push-message": "ПОПОВНЕННЯ",
+    "method-payment": "Спосіб оплати",
+    "input-placeholder": "Вкажіть суму поповнення - UAH",
+    "btn": "ПІДТВЕРДИТИ"
+  },
+  "pin": {
+    "welcome1": "Добрий вечір, ",
+    "welcome2": "Введіть PIN-код",
+    "btn": "УВІЙТИ",
+    "forgot-pin": "Забули PIN?"
+  }
+}

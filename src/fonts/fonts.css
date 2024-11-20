@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'TTCommons';
+    src: local('TTCommons'), url(./TTCommons-DemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'TTCommons';
+    src: local('TTCommons'), url(./TTCommons-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'TTCommons';
+    src: local('TTCommons'), url(./TTCommons-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'TTCommons';
+    src: local('TTCommons'), url(./TTCommons-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url(./nexabold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url(./nexalight.ttf) format('truetype');
+}

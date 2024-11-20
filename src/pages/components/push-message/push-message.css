@@ -1,0 +1,31 @@
+.push-message {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    background: linear-gradient(90deg, #537f8a 0%, #90ddf0 20%, #90ddf0 80%, #537f8a 100%);
+    
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+    "arrow text ."; 
+}
+.push-message svg {
+    width: 25px;
+    height: 22px;
+    grid-area: arrow;
+    align-self: center;
+    margin-left: 18px;
+}
+.push-message h2{
+    width: 200px;
+    margin-top: 5px;
+    justify-self: center;
+    grid-area: text;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    font-family: "TTCommons";
+    color: #31434e;
+}

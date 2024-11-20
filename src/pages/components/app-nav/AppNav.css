@@ -1,0 +1,41 @@
+.app-nav {
+    min-width: 320px;
+    max-width: 768px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: -1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    padding-bottom: 10px;
+}
+
+.app-nav .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(58, 83, 99, 0.3);
+    backdrop-filter: blur(36px);
+}
+
+.app-nav svg {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.app-nav svg path {
+    transition: .2s;
+}
+
+.app-nav svg:hover path {
+    fill: #e6e0e9;
+}
+.app-nav-activ path {
+    fill: #e6e0e9;
+}

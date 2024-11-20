@@ -1,0 +1,17 @@
+.mainLogo {
+    min-width: 218px;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.mainLogo h1 {
+    font-family: 'TTCommons';
+    font-weight: 700;
+    font-size: 36px;
+    color: #3a5566;
+    margin-top: 10px;
+}

@@ -1,0 +1,189 @@
+.EnterPin {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    /* background: linear-gradient(0deg, rgba(96,150,186,.5) 0%, rgba(255,255,255,0) 85%, rgba(255,255,255,0) 100%); */
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    /* padding: 11px 50px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(96, 150, 186, .5) 0%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+}
+
+.text {
+    width: 100%;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pinCode {
+    width: 100%;
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pinCode .dots {
+    width: 63px;
+    height: 9px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pinCode .dots .dot {
+    width: 9px;
+    height: 9px;
+    background: #517886;
+    border-radius: 100%;
+    transition: .2s;
+}
+
+.pinCode .dots .dot-activ {
+    background: #90DDF0;
+}
+
+.keyboard {
+    width: 176px;
+    height: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "num1 num2 num3"
+        "num4 num5 num6"
+        "num7 num8 num9"
+        ". num0 backspace";
+}
+
+.keyboard .num:nth-child(1) {
+    grid-area: num1;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(2) {
+    grid-area: num2;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(3) {
+    grid-area: num3;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(4) {
+    grid-area: num4;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(5) {
+    grid-area: num5;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(6) {
+    grid-area: num6;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(7) {
+    grid-area: num7;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(8) {
+    grid-area: num8;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(9) {
+    grid-area: num9;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .num:nth-child(10) {
+    grid-area: num0;
+    justify-self: center;
+    align-self: center;
+}
+
+.keyboard .backspace {
+    grid-area: backspace;
+    justify-self: center;
+    align-self: center;
+    transition: .1s;
+}
+
+.keyboard .num {
+    width: 40px;
+    height: 40px;
+    background: #31434e;
+    border: 1.37px solid #90ddf0;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TTCommons";
+    font-weight: 500;
+    font-size: 23px;
+    padding-top: 4px;
+    color: #90ddf0;
+    transition: .1s;
+}
+
+.keyboard .num:active {
+    background: rgba(144, 221, 240, 0.6);
+}
+
+.keyboard .backspace:active {
+    transform: translateX(-5px);
+}
+
+
+
+.buttons {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons p {
+    font-family: "TTCommons";
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(144, 221, 240, 0.5);
+}
+
+/* .text{
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+}
+.pinCode{
+    grid-area: pin;
+}
+.buttons{
+    grid-area: buttons;
+} */

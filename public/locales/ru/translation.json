@@ -1,0 +1,82 @@
+{
+  "start-screen": {
+    "welcome1": "Добро пожаловать!",
+    "welcome2": "Выберите язык приложения",
+    "btn-ua": "Украинский",
+    "btn-ru": "Русский",
+    "btn": "ДАЛЕЕ"
+  },
+  "sign-up": {
+    "reg-new-user": "Регистрация нового пользователя",
+    "input-name": "ФИО",
+    "input-date": "Дата рождения",
+    "input-mail": "E-Mail",
+    "input-phone": "Номер телефона",
+    "input-pin": "Создайте PIN-код",
+    "input-pin-repeat": "Подтвердите PIN-код",
+    "reg-button": "СОХРАНИТЬ"
+  },
+  "home": {
+    "empty-transactions": "Транзакций пока нет.",
+    "my-balance": "Мой счет",
+    "btn-deposit": "Депозит",
+    "btn-send": "Отправить",
+    "btn-transfer": "Транзакции",
+    "last-transfer": "Последние транзакции",
+    "sorted": "Сортировать "
+  },
+  "settings": {
+    "push-msg": "МЕНЮ НАСТРОЕК",
+    "language-app": "Язык приложения",
+    "ukr": "Украинский",
+    "ru": "Русский",
+    "current-balance": "Валюта баланса",
+    "uah": "UAH",
+    "usd": "USD",
+    "change-pin": "Сменить PIN-код",
+    "support-service": "Служба поддержки"
+  },
+  "change-pin": {
+    "push-msg": "СМЕНА PIN-КОДА",
+    "error-msg": "Неверный E-mail",
+    "placeholder": "Ваш E-mail",
+    "btn": "ОТПРАВИТЬ КОД"
+  },
+  "change-pin2": {
+    "push-msg": "СМЕНА PIN-КОДА",
+    "error-msg": "Неверный код",
+    "placeholder-code": "Код из письма",
+    "placeholder-pin": "Новый PIN-код",
+    "placeholder-pin-repeat": "Подтвердить PIN-код",
+    "btn": "СОХРАНИТЬ"
+  },
+  "payment":{
+    "push-message": "ПОПОЛНЕНИЕ",
+    "method-payment": "Способ оплаты",
+    "input-placeholder": "Укажите сумму пополнения - UAH",
+    "btn": "ПОДТВЕРДИТЬ"
+  },
+  "payment-complete": {
+    "push-msg": "ВЫПОЛНЕНО!",
+    "text": " успешно зачислено Ваш баланс!",
+    "btn": "ВЕРНУТЬСЯ"
+  },
+  "transfer": {
+    "push-message": "ПЕРЕВОД",
+    "error-message": "Неверный ІD пользователя",
+    "inputId-placeholder": "Укажите ID получателя",
+    "inputMoney-placeholder": "Укажите сумму перевода (UAH)",
+    "btn": "ПОДТВЕРДИТЬ"
+  },
+  "transfer-complete": {
+    "push-msg": "ВЫПОЛНЕНО!",
+    "text": "отправлены пользователю",
+    "btn": "ВЕРНУТЬСЯ"
+  },
+  "pin": {
+    "welcome1": "Добрый вечер, ",
+    "welcome2": "Введите PIN-код",
+    "btn": "ВОЙТИ",
+    "forgot-pin": "Забыли PIN?"
+  }
+}
