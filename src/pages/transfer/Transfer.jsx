@@ -20,7 +20,7 @@ const Transfer = () => {
 
 
     const sendMain = () => {
-        axios.post("http://83.217.208.126/transaction/create", {
+        axios.post("https://api.testwallet.space/transaction/create", {
             "amount": Number(transferData.sum),
             "currency_code": localStorage.getItem("currencyCode"),
             "receiver_id": Number(transferData.id),

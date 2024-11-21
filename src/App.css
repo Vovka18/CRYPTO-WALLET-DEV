@@ -34,3 +34,9 @@ input {
     outline: 0px;
     color: rgba(144, 221, 240, 0.44);
 }
+/* 
+html, body, .App {
+    overscroll-behavior: none; 
+    touch-action: none; 
+    overflow: hidden;
+  } */

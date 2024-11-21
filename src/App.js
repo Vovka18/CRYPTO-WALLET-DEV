@@ -15,12 +15,22 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
 
-  // alert(JSON.stringify(window.Telegram.WebApp.initDataUnsafe?.user?.id))
+//   alert(JSON.stringify(window.Telegram.WebApp.onEvent("activated", true)))
 
-  // useEffect(async ()=>{
-  //   // axios.post()
-    
-  // })
+  window.Telegram.WebApp.expand();
+
+    // console.log(window.Telegram)
+
+
+    window.Telegram.WebApp.onEvent('viewportChanged', () => {
+        window.Telegram.WebApp.expand();
+    });
+
+    // document.addEventListener('touchmove', (e) => {
+    //     e.preventDefault();                          // Отключает свайпы полностью
+    // }, { passive: false });
+      
+      
   const isLoggedIn = localStorage.getItem('isLoggedIn');
   
   return (

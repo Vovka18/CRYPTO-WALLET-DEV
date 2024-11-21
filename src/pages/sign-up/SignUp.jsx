@@ -45,14 +45,14 @@ const SignUp = () => {
     }else if(userData.pin !== userData.pinRepeat){
         setMessageError("Incorrect repeat pin");
     }else{
-      axios.post("http://83.217.208.126/register", {
+      axios.post("https://api.testwallet.space/register", {
         "birth_date": userData.date,
         "email": userData.email,
         "full_name": userData.name,
         "phone": userData.phone,
         "pin": userData.pin,
         // "telegramid": window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : "1234567890"
-        "telegramid": "1234567891"
+        "telegramid": "45364561231"
       })
       .then(response => {
         console.log(response.data);

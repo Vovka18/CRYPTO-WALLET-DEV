@@ -23,7 +23,7 @@ const EnterPin = () => {
         if (true) {
             if (pin.length == 4) {
                 axios
-                    .post("http://83.217.208.126/user/pin", {
+                    .post("https://api.testwallet.space/user/pin", {
                         pin: "8642",
                         telegramid: 9334296590,
 

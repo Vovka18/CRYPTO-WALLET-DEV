@@ -39,7 +39,7 @@ const Home = () => {
 
 
     const getBalanceHandle = () => {
-        axios.get(`http://83.217.208.126/balance/check?user_id=${localStorage.getItem("userid")}`)
+        axios.get(`https://api.testwallet.space/balance/check?user_id=${localStorage.getItem("userid")}`)
             .then((response) => {
                 // console.log(, "aasdfasdf");
                 setCountMoney(response.data == null ? 0 : response.data[0].amount)
@@ -47,7 +47,7 @@ const Home = () => {
             })
     }
     const getTransactionsHandle = () => {
-        axios.get(`http://83.217.208.126/transactions?user_id=${localStorage.getItem("userid")}`)
+        axios.get(`https://api.testwallet.space/transactions?user_id=${localStorage.getItem("userid")}`)
             .then((response) => {
                 setTransactions(response.data)
 
