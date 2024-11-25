@@ -20,29 +20,25 @@ const EnterPin = () => {
     const id = window.Telegram.WebApp.initDataUnsafe?.user?.id;
 
     const enterPin = async () => {
-        if (true) {
+        if (id) {
             if (pin.length == 4) {
+                // alert(window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : 1234567890)
                 axios
-                    .post("https://api.testwallet.space/user/pin", {
-                        pin: "8642",
-                        telegramid: 9334296590,
-
-                        // pin: pin,
-                        // telegramid: window.Telegram.WebApp.initDataUnsafe?.user?.id
-                        //     ? window.Telegram.WebApp.initDataUnsafe?.user?.id
-                        //     : "1234567890",
+                    .post("https://api.walletuah.com/user/pin", {
+                        pin: String(pin),
+                        telegramid: window.Telegram.WebApp.initDataUnsafe?.user?.id
+                            ? window.Telegram.WebApp.initDataUnsafe?.user?.id
+                            : 1234567890,
                     })
                     .then((response) => {
-                        console.log(response);
-                        enqueueSnackbar("ok", {
+                        enqueueSnackbar(t("message.login-ok"), {
                             variant: "success",
                         });
                         localStorage.setItem("hashed_pin", response.data.hashed_pin);
                         Navigate("/home");
                     })
                     .catch((error) => {
-                        console.log(error.response);
-                        enqueueSnackbar(error, {
+                        enqueueSnackbar(error.response.data.message, {
                             variant: "error",
                         });
                     });

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import PushMessage from "../components/push-message/PushMessage";
 import ToggleButton from "../components/toggle-button/ButtonToggle";
 import AppNav from "../components/app-nav/AppNav";
+import { ReactComponent as Copy } from '../../img/copy.svg'
 import "./Settings.css";
 
 const Settings = () => {
@@ -12,6 +13,7 @@ const Settings = () => {
   const [language, setLanguage] = useState(currentLanguage) // 0 - ua, 1 - ru
   const [currency, setCurrency] = useState(currentCurrency) // 0 - uah, 1 - usdt
 
+  const userId = localStorage.getItem("userid");
 
   useEffect(()=>{
     i18n.changeLanguage(language === 0 ? "ua" : "ru")
@@ -25,6 +27,7 @@ const Settings = () => {
       <AppNav block="setting" />
       <PushMessage msg={t("settings.push-msg")} />
       <div className="setting">
+      <h4 className="copyPin" onClick={()=> { navigator.clipboard.writeText(userId).then(() => {alert('Текст скопирован: ' + userId)})} }>{t("settings.my-id")} <Copy/></h4>
         <div className="language">
           <h4>{t("settings.language-app")}</h4>
           <ToggleButton btn1={t("settings.ukr")} btn2={t("settings.ru")} defaultActive={currentLanguage} setParametr={setLanguage} />

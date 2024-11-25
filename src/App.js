@@ -14,21 +14,15 @@ import { useEffect } from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
-
-//   alert(JSON.stringify(window.Telegram.WebApp.onEvent("activated", true)))
-
-  window.Telegram.WebApp.expand();
-
-    // console.log(window.Telegram)
-
-
+    window.Telegram.WebApp.expand();
+    
     window.Telegram.WebApp.onEvent('viewportChanged', () => {
         window.Telegram.WebApp.expand();
     });
 
-    // document.addEventListener('touchmove', (e) => {
-    //     e.preventDefault();                          // Отключает свайпы полностью
-    // }, { passive: false });
+    document.addEventListener('touchmove', (e) => {
+        e.preventDefault();                          // Отключает свайпы полностью
+    }, { passive: false });
       
       
   const isLoggedIn = localStorage.getItem('isLoggedIn');

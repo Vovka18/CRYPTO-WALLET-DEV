@@ -45,14 +45,14 @@ const SignUp = () => {
     }else if(userData.pin !== userData.pinRepeat){
         setMessageError("Incorrect repeat pin");
     }else{
-      axios.post("https://api.testwallet.space/register", {
-        "birth_date": userData.date,
-        "email": userData.email,
-        "full_name": userData.name,
-        "phone": userData.phone,
-        "pin": userData.pin,
-        // "telegramid": window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : "1234567890"
-        "telegramid": "45364561231"
+      axios.post("https://api.walletuah.com/register", {
+        "birth_date": String(userData.date),
+        "email": String(userData.email),
+        "full_name": String(userData.name),
+        "phone": String(userData.phone),
+        "pin": String(userData.pin),
+        "telegramid": String(window.Telegram.WebApp.initDataUnsafe?.user?.id) ? String(window.Telegram.WebApp.initDataUnsafe?.user?.id) : "1234567890"
+        // "telegramid": "45364561231"
       })
       .then(response => {
         console.log(response.data);
@@ -64,6 +64,7 @@ const SignUp = () => {
       .catch(error => {
           console.log(error.response.data.error);
           console.log(error.response);
+          alert(JSON.stringify(error.response))
           enqueueSnackbar(error.response.data.error, {
               variant: "error"
           })

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useId, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import MainLogo from "../components/logo/mainLogo"
 import ToggleButtons from "../components/toggle-button/ButtonToggle"
 import Button from '../components/button/Button'
 import './StartScreen.css'
 import {useNavigate} from "react-router";
+import axios from 'axios';
 
 const StartScreen = () => {
   const navigate = useNavigate();
@@ -16,8 +17,18 @@ const StartScreen = () => {
   },[language])
 
   useEffect(()=>{
-    if (localStorage.getItem("isLoggedIn") == "true") {
-        navigate("/home")
+    const userId = localStorage.getItem("userid")
+
+    const isLoggedIn = localStorage.getItem("isLoggedIn")
+      // console.log(userId);
+      if (isLoggedIn == "true" && userId !== null) {
+        axios.get(`https://api.walletuah.com/user?user_id=${userId}`)
+        .then((response)=>{
+          // alert( JSON.stringify(response.data) )
+          navigate("/enter-pin")
+        }).catch((err)=>{
+          console.log(err.response?.data?.error);
+        })
     }
   }, [])
   return (

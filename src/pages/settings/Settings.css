@@ -1,20 +1,22 @@
 .settings{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    max-height: 200%;
     background: linear-gradient(180deg, rgba(96, 150, 186, 0) 0%, rgba(96, 150, 186, 0.5) 100%);
+    overflow: scroll;
 }
 .settings .app-nav .background{
     background: #21282D;
     backdrop-filter: blur(0px);
 }
 .settings .setting{
-    height: 200px;
+    height: 260px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 63px;
+    margin-top: 70px;
 }
 .settings .setting .toggle-buttons{
     flex-direction: row;
@@ -32,8 +34,24 @@
     width: 100%;
     height: 66px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.copyPin{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(144, 221, 240, 0.44);
+    cursor: pointer;
+}
+.copyPin svg{
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.copyPin svg path{
+    fill: rgba(144, 221, 240, 0.44);
 }
