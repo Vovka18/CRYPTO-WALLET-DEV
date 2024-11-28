@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "../components/button/Button";
 import ErrorMessage from "../components/error-message/ErrorMessage";
@@ -9,6 +9,7 @@ import {useSnackbar} from "notistack";
 import {useNavigate} from "react-router";
 
 const SignUp = () => {
+  const inputRef = useRef(null);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -78,6 +79,13 @@ const SignUp = () => {
     setUserData({...userData, date: e.target.value})
   }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.target.blur()
+      // e.preventDefault(); // Останавливаем стандартное поведение
+    }
+  });
+
   return (
     <div className="SignUp">
       <ErrorMessage textError={messageError}/>
@@ -90,7 +98,7 @@ const SignUp = () => {
             
             <div className="input-date">
               <input id="date-text" type="text" placeholder={t("sign-up.input-date")} onChange={changeInputDate} value={userData.date}/>
-              <input type="date" onChange={changeInputDate} />
+              <input type="date" onChange={changeInputDate}  />
             </div>
             
             <input id="email" type="email" name="email" placeholder={t("sign-up.input-mail")} onChange={(e) => setUserData({ ...userData, [e.target.name]: e.target.value })}/>

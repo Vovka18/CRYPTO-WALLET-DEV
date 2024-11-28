@@ -68,6 +68,7 @@
     border-left: 0px;
     border-radius: 0px 10px 10px 0px;
     padding-right: 26px;
+    color: rgba(0, 0, 0, 0);
     
 }
 .SignUp .inputs .input-date input[type=text]{

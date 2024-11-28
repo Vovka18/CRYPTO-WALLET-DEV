@@ -18,6 +18,7 @@
     align-items: center;
     margin-top: 70px;
 }
+
 .settings .setting .toggle-buttons{
     flex-direction: row;
 }
@@ -39,14 +40,21 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .copyPin{
+    width: 100%;
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: rgba(144, 221, 240, 0.44);
+    justify-content: center;
+    padding: 0px 9%;
+    font-weight: 500;
+    font-size: 18px;
+    color: #e6e0e9;
     cursor: pointer;
+}
+.copyPin > h4{
+    /* width: 50%; */
+    text-align: center;
 }
 .copyPin svg{
     margin-left: 5px;
@@ -54,4 +62,26 @@
 }
 .copyPin svg path{
     fill: rgba(144, 221, 240, 0.44);
+}
+.settings .copyPin button{
+    max-width: 100px;
+    min-width: 100px;
+    width: 100px;
+    height: 36px;
+    border: 1.00px solid #517886;
+    margin-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: #00000000;
+    outline: 0px;
+    font-family: 'TTCommons';
+    font-weight: 500;
+    font-size: 12px;
+    color: #e6e0e9;
+    transition: .2s ease-in-out; 
+    backdrop-filter: blur(23.97233009338379px);
+}
+.settings .copyPin button.btn-active{
+    border: 3px solid #90ddf0;
+    color: #90ddf0;
 }

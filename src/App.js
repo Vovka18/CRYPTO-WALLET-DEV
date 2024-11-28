@@ -26,6 +26,10 @@ function App() {
       
       
   const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    // if(window.Telegram.WebApp.initDataUnsafe?.user?.id == 933429659) {
+    //     localStorage.clear()
+    // }
   
   return (
       <BrowserRouter>

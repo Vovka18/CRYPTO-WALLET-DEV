@@ -22,7 +22,7 @@ const EnterPin = () => {
     const enterPin = async () => {
         if (id) {
             if (pin.length == 4) {
-                // alert(window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : 1234567890)
+                // alert( window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : 1234567890)
                 axios
                     .post("https://api.walletuah.com/user/pin", {
                         pin: String(pin),
@@ -43,7 +43,7 @@ const EnterPin = () => {
                         });
                     });
             }else {
-                enqueueSnackbar("Введите пароль", {
+                enqueueSnackbar(t("message.input-password"), {
                     variant: "error",
                 });
             }

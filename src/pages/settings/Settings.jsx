@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PushMessage from "../components/push-message/PushMessage";
 import ToggleButton from "../components/toggle-button/ButtonToggle";
+import Button from "../components/button/Button";
 import AppNav from "../components/app-nav/AppNav";
 import { ReactComponent as Copy } from '../../img/copy.svg'
 import "./Settings.css";
@@ -27,7 +28,17 @@ const Settings = () => {
       <AppNav block="setting" />
       <PushMessage msg={t("settings.push-msg")} />
       <div className="setting">
-      <h4 className="copyPin" onClick={()=> { navigator.clipboard.writeText(userId).then(() => {alert('Текст скопирован: ' + userId)})} }>{t("settings.my-id")} <Copy/></h4>
+      {/* <h4 className="copyPin" onClick={()=> { navigator.clipboard.writeText(userId).then(() => {alert('Текст скопирован: ' + userId)})} }>{t("settings.my-id")} <Copy/></h4> */}
+      <div className="copyPin">
+        <h4>Ваш id {userId}123</h4>
+        <Button onClick={(e)=> { 
+          navigator.clipboard.writeText(userId).then(() => {alert('Текст скопирован: ' + userId)}).catch((e=>{})) 
+          e.target.classList.add("btn-active")
+        }}
+          text={"Копировать"}/>
+      </div>
+
+
         <div className="language">
           <h4>{t("settings.language-app")}</h4>
           <ToggleButton btn1={t("settings.ukr")} btn2={t("settings.ru")} defaultActive={currentLanguage} setParametr={setLanguage} />

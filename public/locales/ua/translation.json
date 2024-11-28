@@ -81,6 +81,7 @@
     "forgot-pin": "Забули PIN?"
   },
   "message":{
-    "login-ok": "Авторизація успішна"
+    "login-ok": "Авторизація успішна",
+    "input-password":"Введіь пароль"
   }
 }

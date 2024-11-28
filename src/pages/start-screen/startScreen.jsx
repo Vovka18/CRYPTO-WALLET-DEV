@@ -21,7 +21,8 @@ const StartScreen = () => {
 
     const isLoggedIn = localStorage.getItem("isLoggedIn")
       // console.log(userId);
-      if (isLoggedIn == "true" && userId !== null) {
+      // isLoggedIn == "true" && userId !== null
+      if (true) {
         axios.get(`https://api.walletuah.com/user?user_id=${userId}`)
         .then((response)=>{
           // alert( JSON.stringify(response.data) )
@@ -31,6 +32,10 @@ const StartScreen = () => {
         })
     }
   }, [])
+
+  
+
+
   return (
     <div className='StartScreen'>
         <MainLogo/>
