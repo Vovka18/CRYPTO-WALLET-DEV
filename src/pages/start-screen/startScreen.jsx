@@ -23,9 +23,8 @@ const StartScreen = () => {
       // console.log(userId);
       // isLoggedIn == "true" && userId !== null
       if (true) {
-        axios.get(`https://api.walletuah.com/user?user_id=${userId}`)
+        axios.get(`https://api.walletuah.com/api/user?user_id=${userId}`)
         .then((response)=>{
-          // alert( JSON.stringify(response.data) )
           navigate("/enter-pin")
         }).catch((err)=>{
           console.log(err.response?.data?.error);

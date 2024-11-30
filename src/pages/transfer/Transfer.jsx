@@ -20,7 +20,7 @@ const Transfer = () => {
 
 
     const sendMain = () => {
-        axios.post("https://api.walletuah.com/transaction/create", {
+        axios.post("https://api.walletuah.com/api/transaction/create", {
             "amount": Number(transferData.sum),
             "currency_code": localStorage.getItem("currencyCode"),
             "receiver_id": Number(transferData.id),

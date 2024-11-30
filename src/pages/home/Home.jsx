@@ -39,14 +39,14 @@ const Home = () => {
 
 
     const getBalanceHandle = () => {
-        axios.get(`https://api.walletuah.com/balance/check?user_id=${localStorage.getItem("userid")}`)
+        axios.get(`https://api.walletuah.com/api/balance/check?user_id=${localStorage.getItem("userid")}`)
             .then((response) => {
                 // alert(JSON.stringify(response.data));
                 setCountMoney(response.data == null ? 0 : response.data[0].amount)
             })
     }
     const getTransactionsHandle = () => {
-        axios.get(`https://api.walletuah.com/transactions?user_id=${localStorage.getItem("userid")}`)
+        axios.get(`https://api.walletuah.com/api/transactions?user_id=${localStorage.getItem("userid")}`)
             .then((response) => {
                 // alert(JSON.stringify(response.data));
                 setTransactions(response.data)
@@ -119,7 +119,7 @@ const Home = () => {
             </div>
           </div>
 
-            <Transactions listTransfers={transactions}/>
+            <Transactions listTransfers={testListTransfers}/>
 
         </div>
         {transactions && (

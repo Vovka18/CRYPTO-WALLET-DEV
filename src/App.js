@@ -30,7 +30,7 @@ function App() {
     // if(window.Telegram.WebApp.initDataUnsafe?.user?.id == 933429659) {
     //     localStorage.clear()
     // }
-  
+
   return (
       <BrowserRouter>
           <div className="App">

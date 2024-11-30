@@ -24,7 +24,7 @@ const EnterPin = () => {
             if (pin.length == 4) {
                 // alert( window.Telegram.WebApp.initDataUnsafe?.user?.id ? window.Telegram.WebApp.initDataUnsafe?.user?.id : 1234567890)
                 axios
-                    .post("https://api.walletuah.com/user/pin", {
+                    .post("https://api.walletuah.com/api/user/pin", {
                         pin: String(pin),
                         telegramid: window.Telegram.WebApp.initDataUnsafe?.user?.id
                             ? window.Telegram.WebApp.initDataUnsafe?.user?.id

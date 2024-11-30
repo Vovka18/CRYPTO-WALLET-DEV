@@ -32,6 +32,15 @@ const SignUp = () => {
     const validMail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const phoneRegex = /^(\+?\d{1,3})?[-.\s]?(\(?\d{1,4}\)?)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
     const validDate = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
+    alert(JSON.stringify({
+      "birth_date": String(userData.date),
+      "email": String(userData.email),
+      "full_name": String(userData.name),
+      "phone": String(userData.phone),
+      "pin": String(userData.pin),
+      "telegramid": window.Telegram.WebApp.initDataUnsafe?.user?.id
+      // "telegramid": "45364561231"
+    }))
 
     if (userData.name.length < 5 || userData.name.length > 40) {
         setMessageError("Incorrect name");
@@ -46,26 +55,25 @@ const SignUp = () => {
     }else if(userData.pin !== userData.pinRepeat){
         setMessageError("Incorrect repeat pin");
     }else{
-      axios.post("https://api.walletuah.com/register", {
+      axios.post("https://api.walletuah.com/api/register", {
         "birth_date": String(userData.date),
         "email": String(userData.email),
         "full_name": String(userData.name),
         "phone": String(userData.phone),
         "pin": String(userData.pin),
-        "telegramid": String(window.Telegram.WebApp.initDataUnsafe?.user?.id) ? String(window.Telegram.WebApp.initDataUnsafe?.user?.id) : "1234567890"
+        "telegramid": String(window.Telegram.WebApp.initDataUnsafe?.user?.id)
         // "telegramid": "45364561231"
       })
       .then(response => {
-        console.log(response.data);
         localStorage.setItem("isLoggedIn", true);
         localStorage.setItem("telegramid", response.data.user.telegramid);
         localStorage.setItem("userid", response.data.user.id);
         navigate("/home")
       })
       .catch(error => {
+          alert(JSON.stringify(error.response.data));
           console.log(error.response.data.error);
           console.log(error.response);
-          alert(JSON.stringify(error.response))
           enqueueSnackbar(error.response.data.error, {
               variant: "error"
           })

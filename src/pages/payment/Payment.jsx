@@ -17,7 +17,7 @@ const Payment = () => {
     const currencyCode = localStorage.getItem("currencyCode") ? localStorage.getItem("currencyCode") : "UAH";
 
     const deposithandle = () => {
-        axios.post("https://api.walletuah.com/balance/deposit", {
+        axios.post("https://api.walletuah.com/api/balance/deposit", {
             "amount": Number(sumPayment),
             "currency_code": currencyCode,
             "user_id": Number(localStorage.getItem("userid"))
